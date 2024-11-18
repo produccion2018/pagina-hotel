@@ -16,7 +16,7 @@ background-color: gray;
 }
 
   
-  .mauro {
+.mauro {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     display: flex;
@@ -45,7 +45,7 @@ background-color: gray;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transform: translateY(50px);
     opacity: 0;
-    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out, box-shadow 0.3s ease-in-out;
   }
   
   .testimonio p {
@@ -66,8 +66,29 @@ background-color: gray;
     margin-bottom: 10px;
   }
   
+  /* Animación al mostrar el testimonio */
   .testimonio.show {
     transform: translateY(0);
     opacity: 1;
+  }
+  
+  /* Hover con animación y cambio de color */
+  .testimonio:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background-color: #f9f9f9;
+  }
+  
+  .testimonio:hover h3 {
+    color: #ff6600; /* Cambio de color del título al pasar el ratón */
+  }
+  
+  .testimonio:hover p {
+    color: #777; /* Cambio de color del texto al pasar el ratón */
+  }
+  
+  .testimonio:hover img {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen */
+    transition: transform 0.3s ease;
   }
   

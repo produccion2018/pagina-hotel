@@ -1,5 +1,5 @@
 
-  document.getElementById('reservation-form').addEventListener('submit', function(event) {
+document.getElementById('reservation-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Evita el envío tradicional del formulario
     
     // Obtención de los valores del formulario
@@ -20,6 +20,4 @@
       document.getElementById('reservation-form').reset();
     });
   });
-
-
 
