@@ -1,94 +1,128 @@
 /* Barra de navegación */
 .navbar {
-    background-color: #ff800086;
-    font-weight: bold;
+  background-color: #ff800086;
+  font-weight: bold;
 }
 
 .navbar-nav .nav-link {
-    color: #fff !important;
-    font-size: 18px;
-    padding: 12px 20px;
-    transition: color 0.3s ease, background-color 0.3s ease;
+  color: #fff !important;
+  font-size: 18px;
+  padding: 12px 20px;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
-background-color: gray;
+  background-color: gray;
 }
 
-  
 .mauro {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-  
-  .testimonios {
-    text-align: center;
-    padding: 20px;
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.testimonios {
+  text-align: center;
+  padding: 20px;
+}
+
+.testimonio-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.testimonio {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(50px);
+  opacity: 0;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out, box-shadow 0.3s ease-in-out;
+}
+
+.testimonio p {
+  font-size: 14px;
+  color: #555;
+}
+
+.testimonio h3 {
+  font-size: 18px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.testimonio img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Animación al mostrar el testimonio */
+.testimonio.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Hover con animación y cambio de color */
+.testimonio:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background-color: #f9f9f9;
+}
+
+.testimonio:hover h3 {
+  color: #ff6600; /* Cambio de color del título al pasar el ratón */
+}
+
+.testimonio:hover p {
+  color: #777; /* Cambio de color del texto al pasar el ratón */
+}
+
+.testimonio:hover img {
+  transform: scale(1.1); /* Aumenta el tamaño de la imagen */
+  transition: transform 0.3s ease;
+}
+
+/* Media Queries para hacerlo responsive */
+
+/* Para dispositivos móviles */
+@media (max-width: 768px) {
   .testimonio-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 20px;
+      grid-template-columns: repeat(2, 1fr); /* 2 columnas */
   }
-  
-  .testimonio {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transform: translateY(50px);
-    opacity: 0;
-    transition: transform 0.5s ease-out, opacity 0.5s ease-out, box-shadow 0.3s ease-in-out;
+
+  .navbar-nav .nav-link {
+      font-size: 16px; /* Ajusta el tamaño del texto en el menú */
+      padding: 10px 15px;
   }
-  
-  .testimonio p {
-    font-size: 14px;
-    color: #555;
+}
+
+/* Para tablets */
+@media (max-width: 1024px) {
+  .testimonio-container {
+      grid-template-columns: repeat(3, 1fr); /* 3 columnas */
   }
-  
-  .testimonio h3 {
-    font-size: 18px;
-    color: #333;
-    margin-top: 10px;
+
+  .navbar-nav .nav-link {
+      font-size: 17px;
   }
-  
-  .testimonio img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+}
+
+/* Para pantallas grandes (computadoras de escritorio) */
+@media (min-width: 1025px) {
+  .testimonio-container {
+      grid-template-columns: repeat(4, 1fr); /* 4 columnas */
   }
-  
-  /* Animación al mostrar el testimonio */
-  .testimonio.show {
-    transform: translateY(0);
-    opacity: 1;
+
+  .navbar-nav .nav-link {
+      font-size: 18px;
   }
-  
-  /* Hover con animación y cambio de color */
-  .testimonio:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    background-color: #f9f9f9;
-  }
-  
-  .testimonio:hover h3 {
-    color: #ff6600; /* Cambio de color del título al pasar el ratón */
-  }
-  
-  .testimonio:hover p {
-    color: #777; /* Cambio de color del texto al pasar el ratón */
-  }
-  
-  .testimonio:hover img {
-    transform: scale(1.1); /* Aumenta el tamaño de la imagen */
-    transition: transform 0.3s ease;
-  }
-  
+}
