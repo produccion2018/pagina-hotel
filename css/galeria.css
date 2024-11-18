@@ -1,0 +1,151 @@
+/* Barra de navegación */
+.navbar {
+    background-color: #ff800086;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+    font-size: 18px;
+    padding: 12px 20px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+background-color: gray;
+}
+
+/* Estilo básico para las tarjetas */
+.card {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    border-radius: 15px; /* Bordes más suaves */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Agregar animación a la sombra */
+  }
+  
+  .card:hover {
+    transform: translateY(-10px); /* Efecto sutil de levantar la tarjeta */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  }
+  
+  /* Efecto de hover sobre la imagen */
+  .card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .card:hover img {
+    opacity: 0.8;
+    transform: scale(1.1); /* Aumentar el zoom en la imagen */
+  }
+  
+  /* Estilo del texto dentro de la tarjeta */
+  .card-body {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    border-radius: 0 0 15px 15px;
+    color: white;
+    transition: background 0.3s ease;
+  }
+  
+  .card:hover .card-body {
+    background: rgba(0, 0, 0, 0.85); /* Fondo más oscuro al hacer hover */
+  }
+  
+  .card-text {
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 1.4;
+  }
+  
+  /* Estilo para la galería */
+  .gallery-container {
+    padding: 60px 20px;
+    background-color: #f9f9f9; /* Fondo sutil para la galería */
+  }
+  
+  .gallery-container h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #333;
+  }
+  
+  /* Estilo de las columnas con Flexbox */
+  .row.g-4 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  
+  .card {
+    flex: 1 1 calc(33.333% - 20px); /* Tres columnas con espacio entre ellas */
+    max-width: 300px; /* Limitar el tamaño máximo de las tarjetas */
+    min-width: 280px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      flex: 1 1 calc(50% - 20px); /* Dos columnas en pantallas más pequeñas */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      flex: 1 1 100%; /* Una sola columna en pantallas muy pequeñas */
+    }
+  }
+  
+  /* Estilo del texto dentro de la tarjeta */
+  .card-body {
+    background: #ffffffcc;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    transition: background 0.3s ease;
+  }
+  
+  .card:hover .card-body {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+  .card-text {
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+  
+  /* Añadir padding alrededor de las imágenes */
+  .gallery-container {
+    padding: 40px 0;
+  }
+  
+  .gallery-container h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+    color: #333;
+  }
+  
+  /* Estilo de las columnas */
+  .row.g-4 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  

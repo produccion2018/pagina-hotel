@@ -1,0 +1,42 @@
+/* Barra de navegación */
+.navbar {
+  background-color: #ff800086;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-size: 18px;
+  padding: 12px 20px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: gray;
+}
+
+/* Estilos personalizados */
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  color: #007bff;
+}
+
+.service-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-top: 15px;
+}
+
+.service-description {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
